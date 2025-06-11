@@ -1,0 +1,27 @@
+[project]
+name = "reven-plugin-etube"
+authors = [
+    { name = "Magnust Hektoen Steensland", email = "mag.steensland@gmail.com" },
+    { name = "Norbert Arkadiusz Görke", email = "me@ngorke.dev" },
+]
+license = "Apache-2.0"
+description = "Reven plugin for reverse engineering Shimano E-Tube firmware."
+readme = { file = "README.md", content-type = "text/markdown" }
+keywords = ["reverse engineering"]
+dependencies = ["pycryptodome==3.23.0", "attrs==25.3.0", "typer==0.16.0"]
+dynamic = ["version"]
+
+[project.urls]
+
+[build-system]
+requires = ["pdm-backend >= 2.4.4"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+run-setuptools = true
+
+[tool.pdm.version]
+source = "scm"

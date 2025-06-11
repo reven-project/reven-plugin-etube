@@ -1,0 +1,4 @@
+/dist
+/.pdm*
+__pycache__/
+/**/reven_plugin_etube.egg-info
