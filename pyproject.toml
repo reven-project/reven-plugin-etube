@@ -8,7 +8,7 @@ license = "Apache-2.0"
 description = "Reven plugin for reverse engineering Shimano E-Tube firmware."
 readme = { file = "README.md", content-type = "text/markdown" }
 keywords = ["reverse engineering"]
-dependencies = ["pycryptodome==3.23.0", "attrs==25.3.0", "typer==0.16.0"]
+dependencies = ["pycryptodome~=3.23", "attrs~=25.3", "typer~=0.16.0"]
 dynamic = ["version"]
 
 [project.urls]
