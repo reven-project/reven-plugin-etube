@@ -12,16 +12,10 @@ dependencies = ["pycryptodome~=3.23", "attrs~=25.3", "typer~=0.16.0"]
 dynamic = ["version"]
 
 [project.urls]
+Repository = "https://github.com/reven-project/reven-plugin-etube.git"
 
 [build-system]
-requires = ["pdm-backend >= 2.4.4"]
-build-backend = "pdm.backend"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
-[tool.pdm]
-distribution = true
-
-[tool.pdm.build]
-run-setuptools = true
-
-[tool.pdm.version]
-source = "scm"
+[tool.setuptools_scm]
