@@ -33,7 +33,7 @@ def decrypt(
         typer.Argument(
             help="The text codec to use for reading / writing the plaintext."
         ),
-    ] = "utf-16-be",
+    ] = "utf-16-le",
 ):
     iv = input.buffer.read(16)
     cipher = AES.new(parse_key(key_format, key), AES.MODE_CBC, iv)
@@ -55,7 +55,7 @@ def encrypt(
         typer.Argument(
             help="The text codec to use for reading / writing the plaintext."
         ),
-    ] = "utf-16-be",
+    ] = "utf-16-le",
 ):
     iv = get_random_bytes(16)
     cipher = AES.new(parse_key(key_format, key), AES.MODE_CBC, iv)
